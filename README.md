@@ -1,3 +1,13 @@
+# 🤖 AI Agent Suite (TypeScript)
+
+This is a TypeScript-based AI Agent Suite built using LangChain.js, LangGraph, and Next.js.
+
+### 🌐 Live Demo
+The application is deployed on GitHub Pages at:
+👉 **[https://udaysinghkushwah.github.io/ai-agent-suite-ts/](https://udaysinghkushwah.github.io/ai-agent-suite-ts/)**
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

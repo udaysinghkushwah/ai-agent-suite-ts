@@ -1,6 +1,12 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  basePath: isProd ? '/ai-agent-suite-ts' : '',
 };
 
 module.exports = nextConfig;
