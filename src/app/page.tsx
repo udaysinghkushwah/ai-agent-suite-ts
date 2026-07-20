@@ -142,14 +142,17 @@ function DashboardPanel() {
 
       <hr className="divider" />
       <div style={{ display: "flex", gap: "1.5rem", background: "var(--bg-glass)", border: "1px solid var(--border)", borderRadius: "16px", padding: "1.5rem", alignItems: "center" }}>
-        <div style={{ padding: "0.4rem", background: "white", borderRadius: "10px", flexShrink: 0, width: "130px" }}>
-          <img src="/upi-qr.jpg" alt="UPI QR Code" style={{ width: "100%", height: "auto", display: "block", borderRadius: "6px" }} />
-        </div>
+        <div style={{ fontSize: "2.2rem", padding: "0 0.5rem" }}>☕</div>
         <div>
-          <h3 style={{ margin: 0, color: "var(--primary-light)", display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "1.1rem" }}>☕ Buy Me a Coffee</h3>
-          <p style={{ margin: "0.5rem 0 0", fontSize: "0.85rem", color: "var(--text-secondary)" }}>
-            If you find this suite of AI agents useful, feel free to support my work by buying me a coffee. Scan the QR code using any UPI app. Thank you!
+          <h3 style={{ margin: 0, color: "var(--primary-light)", display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "1.1rem" }}>Buy Me a Chai</h3>
+          <p style={{ margin: "0.5rem 0", fontSize: "0.85rem", color: "var(--text-secondary)" }}>
+            If you find this suite of AI agents useful, feel free to support my work. Thank you!
           </p>
+          <a href="https://www.buymeachai.in/toudaysinghkushwah" target="_blank" rel="noreferrer"
+            className="action-btn"
+            style={{ display: "inline-block", textDecoration: "none", marginTop: "0.3rem" }}>
+            🍵 Buy Me a Chai
+          </a>
         </div>
       </div>
     </div>
