@@ -1,0 +1,36 @@
+{
+  "name": "ai-agent-suite-ts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@langchain/anthropic": "^0.3.0",
+    "@langchain/community": "^0.3.0",
+    "@langchain/core": "^0.3.0",
+    "@langchain/langgraph": "^0.2.0",
+    "@langchain/textsplitters": "^0.1.0",
+    "langchain": "^0.3.0",
+    "langsmith": "^0.2.0",
+    "next": "14.2.18",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-markdown": "^9.0.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "ai": "^3.4.0",
+    "zod": "^3.23.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@typescript-eslint/typescript-estree": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-syntax-highlighter": "^15.5.0",
+    "typescript": "^5"
+  }
+}
