@@ -101,7 +101,7 @@ async function escalationCheckNode(state: SupportState): Promise<Partial<Support
 let _supportGraph: ReturnType<typeof buildSupportGraph> | null = null;
 
 export function buildSupportGraph() {
-  const builder = new StateGraph(SupportStateAnnotation);
+  const builder = new StateGraph(SupportStateAnnotation) as any;
 
   builder.addNode("intentClassifier", intentClassifierNode);
   builder.addNode("retriever", retrieverNode);

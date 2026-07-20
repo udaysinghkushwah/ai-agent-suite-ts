@@ -104,7 +104,7 @@ ${state.llmReview}
 let _codeGraph: ReturnType<typeof buildCodeGraph> | null = null;
 
 export function buildCodeGraph() {
-  const builder = new StateGraph(CodeStateAnnotation);
+  const builder = new StateGraph(CodeStateAnnotation) as any;
 
   builder.addNode("syntax", syntaxNode);
   builder.addNode("security", securityNode);

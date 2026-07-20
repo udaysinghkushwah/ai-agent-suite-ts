@@ -139,6 +139,19 @@ function DashboardPanel() {
           </div>
         ))}
       </div>
+
+      <hr className="divider" />
+      <div style={{ display: "flex", gap: "1.5rem", background: "var(--bg-glass)", border: "1px solid var(--border)", borderRadius: "16px", padding: "1.5rem", alignItems: "center" }}>
+        <div style={{ padding: "0.4rem", background: "white", borderRadius: "10px", flexShrink: 0, width: "130px" }}>
+          <img src="/upi-qr.jpg" alt="UPI QR Code" style={{ width: "100%", height: "auto", display: "block", borderRadius: "6px" }} />
+        </div>
+        <div>
+          <h3 style={{ margin: 0, color: "var(--primary-light)", display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "1.1rem" }}>☕ Buy Me a Coffee</h3>
+          <p style={{ margin: "0.5rem 0 0", fontSize: "0.85rem", color: "var(--text-secondary)" }}>
+            If you find this suite of AI agents useful, feel free to support my work by buying me a coffee. Scan the QR code using any UPI app. Thank you!
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -643,6 +656,18 @@ export default function Home() {
             <a href="https://smith.langchain.com" target="_blank" rel="noreferrer" style={{ color: "var(--primary-light)" }}>
               View LangSmith →
             </a>
+          </div>
+
+          <hr style={{ border: "none", borderTop: "1px solid var(--border)", margin: "1rem 0" }} />
+
+          <div style={{ textAlign: "center" }}>
+            <div className="section-label" style={{ marginBottom: "0.5rem" }}>☕ Buy me a coffee</div>
+            <div style={{ padding: "0.3rem", background: "white", borderRadius: "8px", display: "inline-block", width: "110px", margin: "0 auto" }}>
+              <img src="/upi-qr.jpg" alt="Buy Me a Coffee QR Code" style={{ width: "100%", height: "auto", display: "block", borderRadius: "4px" }} />
+            </div>
+            <div style={{ fontSize: "0.65rem", color: "var(--text-muted)", marginTop: "0.4rem" }}>
+              Scan via UPI
+            </div>
           </div>
         </div>
       </aside>

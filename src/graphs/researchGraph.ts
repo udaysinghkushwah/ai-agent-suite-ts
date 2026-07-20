@@ -104,7 +104,7 @@ async function reportWriterNode(state: ResearchState): Promise<Partial<ResearchS
 let _researchGraph: ReturnType<typeof buildResearchGraph> | null = null;
 
 export function buildResearchGraph() {
-  const builder = new StateGraph(ResearchStateAnnotation);
+  const builder = new StateGraph(ResearchStateAnnotation) as any;
   builder.addNode("planner", plannerNode);
   builder.addNode("searcher", searcherNode);
   builder.addNode("summarizer", summarizerNode);

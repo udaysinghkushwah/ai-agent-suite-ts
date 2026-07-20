@@ -88,7 +88,7 @@ function shouldContinue(state: { messages: BaseMessage[] }): "tools" | typeof EN
 const generalGraphs = new Map<string, ReturnType<typeof buildGeneralGraph>>();
 
 export function buildGeneralGraph() {
-  const builder = new StateGraph(MessagesAnnotation);
+  const builder = new StateGraph(MessagesAnnotation) as any;
   const toolNode = new ToolNode(GENERAL_TOOLS);
 
   builder.addNode("agent", agentNode);

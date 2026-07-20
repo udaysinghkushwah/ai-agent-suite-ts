@@ -74,7 +74,7 @@ function shouldContinue(state: { messages: BaseMessage[] }): "tools" | typeof EN
 const chatbotGraphs = new Map<string, ReturnType<typeof buildChatbotGraph>>();
 
 export function buildChatbotGraph() {
-  const builder = new StateGraph(MessagesAnnotation);
+  const builder = new StateGraph(MessagesAnnotation) as any;
   const toolNode = new ToolNode(CHATBOT_TOOLS);
 
   builder.addNode("chat", chatNode);
