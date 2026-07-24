@@ -608,6 +608,7 @@ function GeneralPanel() {
 
 export default function Home() {
   const [activeAgent, setActiveAgent] = useState<AgentId>("dashboard");
+  const [qrError, setQrError] = useState(false);
 
   const panels: Record<AgentId, React.ReactNode> = {
     dashboard: <DashboardPanel />,
@@ -665,12 +666,25 @@ export default function Home() {
 
           <div style={{ textAlign: "center" }}>
             <div className="section-label" style={{ marginBottom: "0.5rem" }}>☕ Buy me a coffee</div>
-            <div style={{ padding: "0.3rem", background: "white", borderRadius: "8px", display: "inline-block", width: "110px", margin: "0 auto" }}>
-              <img src="/upi-qr.jpg" alt="Buy Me a Coffee QR Code" style={{ width: "100%", height: "auto", display: "block", borderRadius: "4px" }} />
-            </div>
-            <div style={{ fontSize: "0.65rem", color: "var(--text-muted)", marginTop: "0.4rem" }}>
-              Scan via UPI
-            </div>
+            {!qrError ? (
+              <>
+                <div style={{ padding: "0.3rem", background: "white", borderRadius: "8px", display: "inline-block", width: "110px", margin: "0 auto" }}>
+                  <img 
+                    src="/upi-qr.jpg" 
+                    alt="Buy Me a Coffee QR Code" 
+                    style={{ width: "100%", height: "auto", display: "block", borderRadius: "4px" }} 
+                    onError={() => setQrError(true)}
+                  />
+                </div>
+                <div style={{ fontSize: "0.65rem", color: "var(--text-muted)", marginTop: "0.4rem" }}>
+                  Scan via UPI
+                </div>
+              </>
+            ) : (
+              <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", border: "1px dashed var(--border)", borderRadius: "8px", padding: "0.75rem" }}>
+                Add your <code>upi-qr.jpg</code> into the <code>public/</code> folder to display your QR code here.
+              </div>
+            )}
           </div>
         </div>
       </aside>
